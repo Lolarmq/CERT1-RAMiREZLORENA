@@ -1,0 +1,166 @@
+/* =========================
+   CONFIGURACION
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navegacion {
+    background-color: #252b3a;
+    min-height: 100px;
+    padding: 12px 35px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 180px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* MENU */
+
+.menu {
+    align-items: center;
+}
+
+.lista {
+    gap: 10px;
+}
+
+
+/* ENLACES */
+
+.elemento .nav-link {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.elemento .nav-link:hover {
+    background-color: #b28a35;
+    color: #252b3a;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.boton {
+    text-decoration: none;
+    background-color: #b28a35;
+    color: #252b3a;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 22px;
+    border-radius: 20px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+
+/* EFECTO DEL BOTON */
+
+.boton:hover {
+    background-color: #d0aa5a;
+    color: #252b3a;
+}
+
+
+/* =========================
+   HAMBURGUESA
+   ========================= */
+
+.hamburguesa {
+    border: 1px solid white;
+}
+
+.hamburguesa:focus {
+    box-shadow: none;
+}
+
+
+/* =========================
+   PAGINA PRINCIPAL
+   ========================= */
+
+
+/* BIENVENIDA */
+
+.bienvenida {
+    padding-top: 100px !important;
+}
+
+
+/* CONTENIDO DE BIENVENIDA */
+
+.contenido-bienvenida {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* SOBRE NOSOTROS */
+
+.contenido-nosotros {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* ACTIVIDADES */
+
+.actividades .card {
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+/* IMAGENES DE LAS ACTIVIDADES */
+
+.actividades .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   CONTACTO
+   ========================= */
+
+.contacto h3 {
+    font-weight: bold;
+}
+
+
+
