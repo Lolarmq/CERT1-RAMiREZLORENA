@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion - Centro Cultural Puerto Abierto</title>
+
+    <!-- Bootstrap --> 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> 
+     <!-- CSS propio --> 
+     <link rel="stylesheet" href="estilo/estilo.css">
+</head>
+<body>
+
+    <header> 
+        <nav class="navegacion navbar navbar-expand-lg navbar-dark"> 
+            <div class="barra container-fluid d-flex align-items-center"> 
+                <!-- LOGO --> 
+                 <a class="logo navbar-brand" href="PaginaPrincipal.html"> 
+                    <img src="img/Logo (2).png" alt="Centro Cultural Puerto Abierto"> 
+                </a>
+
+                <!-- BOTON MENU CELULAR --> 
+                <button class="hamburguesa navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#menu" 
+                        aria-controls="menu" 
+                        aria-expanded="false" 
+                        aria-label="Abrir menu de navegacion">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- MENU -->
+                <div class="menu collapse navbar-collapse" id="menu">
+
+                    <ul class="lista navbar-nav mx-auto">
+
+                        <li class="elemento nav-item d-flex align-items-center">
+                            <a class="nav-link" href="PaginaPrincipal.html#nosotros">
+                                Nosotros
+                            </a>
+                        </li>
+
+                        <li class="elemento nav-item d-flex align-items-center">
+                            <a class="nav-link active" href="Inscripcion.html">
+                                Inscripcion
+                            </a>
+                        </li>
+
+                        <li class="elemento nav-item d-flex align-items-center">
+                            <a class="nav-link" href="Cartelera.html">
+                                Actividades
+                            </a>
+                        </li>
+
+                        <li class="elemento nav-item d-flex align-items-center">
+                            <a class="nav-link" href="PaginaPrincipal.html#contacto">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- BOTON DESTACADO -->
+                    <a href="Cartelera.html" class="boton btn-cartelera">
+                        Ver actividades
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="inscripcion py-5">
+
+            <div class="container">
+                <div class="text-center mb-5">
+
+                    <h1 class="display-5 fw-bold">
+                        Inscripción
+                    </h1>
+
+                    <p class="lead">
+                        Completa el formulario para registrar tu interés en una de nuestras actividades.
+                    </p>
+
+                </div>
+
+                <form class="col-12 col-md-8 col-lg-7 mx-auto">
+
+                    <div class="mb-3">
+
+                        <label for="nombre" class="form-label">
+                            Nombre completo
+                        </label>
+
+                        <input type="text"
+                                class="form-control"
+                                id="nombre"
+                                name="nombre"
+                                required>
+
+                    </div>
+                    <div class="mb-3">
+
+                        <label for="correo" class="form-label">
+                            Correo electrónico
+                        </label>
+
+                        <input type="email"
+                                class="form-control"
+                                id="correo"
+                                name="correo"
+                                required>
+
+                    </div>
+                    <div class="mb-3">
+
+                        <label for="telefono" class="form-label">
+                            Teléfono
+                        </label>
+
+                        <input type="tel"
+                                class="form-control"
+                                id="telefono"
+                                name="telefono"
+                                required>
+
+                    </div>
+
+                    <div class="mb-3"> 
+
+                        <label for="actividad" class="form-label"> 
+                            Actividad de interés 
+                        </label> 
+
+                        <select class="form-select" id="actividad" name="actividad" required> 
+
+                            <option value="" selected disabled> 
+                                Selecciona una actividad 
+                            </option> 
+                            <option value="ceramica"> 
+                                Cerámica y Alfarería 
+                            </option> 
+                            <option value="pintura"> 
+                                Pintura y Dibujo 
+                            </option> 
+                            <option value="bordado"> 
+                                Bordado Contemporáneo 
+                            </option> 
+                            <option value="teatro"> 
+                                Teatro y Actuación 
+                            </option> 
+                            <option value="musica"> 
+                                Guitarra y Música 
+                            </option> 
+                            <option value="fotografia">              
+                                Fotografía 
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="mb-3"> 
+
+                        <label for="edad" class="form-label"> 
+                            Edad 
+                        </label> 
+
+                        <input type="number" 
+                                class="form-control" 
+                                id="edad" 
+                                name="edad" 
+                                min="1" 
+                                max="120" 
+                                required> 
+                    </div>
+
+                    <div class="mb-3"> 
+
+                        <label for="comentarios" class="form-label"> 
+                            Comentarios adicionales 
+                        </label>
+
+                        <textarea class="form-control" 
+                                    id="comentarios" 
+                                    name="comentarios" 
+                                    rows="4"></textarea> 
+
+                    </div>
+
+                    <div class="form-check mb-4"> 
+
+                        <input class="form-check-input" type="checkbox" id="condiciones" name="condiciones" required>
+
+                        <label class="form-check-label" for="condiciones"> 
+                            Acepto las condiciones de participación. 
+                        </label> 
+
+                    </div>
+                    <div class="text-center"> 
+                        <button type="submit" class="boton"> 
+                            Enviar inscripción 
+                        </button> 
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Centro Cultural Puerto Abierto
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap JS --> 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

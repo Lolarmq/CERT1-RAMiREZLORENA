@@ -6,9 +6,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', serif;
+    padding-top: 100px;
 }
 
 
@@ -20,6 +25,12 @@ body {
     background-color: #252b3a;
     min-height: 100px;
     padding: 12px 35px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 
@@ -55,13 +66,10 @@ body {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 7px 18px;
+    padding: 8px 18px;
     border-radius: 20px;
     transition: 0.3s;
 }
-
-
-/* EFECTO AL PASAR EL MOUSE */
 
 .elemento .nav-link:hover {
     background-color: #b28a35;
@@ -83,10 +91,8 @@ body {
     border-radius: 20px;
     white-space: nowrap;
     transition: 0.3s;
+    border: none;
 }
-
-
-/* EFECTO DEL BOTON */
 
 .boton:hover {
     background-color: #d0aa5a;
@@ -108,43 +114,91 @@ body {
 
 
 /* =========================
-   PAGINA PRINCIPAL
+   BIENVENIDA
    ========================= */
 
-
-/* BIENVENIDA */
-
 .bienvenida {
-    padding-top: 100px !important;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f5f3ed;
 }
-
-
-/* CONTENIDO DE BIENVENIDA */
 
 .contenido-bienvenida {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-/* SOBRE NOSOTROS */
-
-.contenido-nosotros {
     max-width: 850px;
-    margin: 0 auto;
+}
+
+.subtitulo-bienvenida {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.contenido-bienvenida h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.descripcion-bienvenida {
+    font-size: 22px;
+    margin-bottom: 35px;
 }
 
 
-/* ACTIVIDADES */
+/* =========================
+   SOBRE NOSOTROS
+   ========================= */
+
+.sobre-nosotros {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    scroll-margin-top: 100px;
+    background-color: white;
+}
+
+.sobre-nosotros img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.sobre-nosotros h2 {
+    margin-bottom: 20px;
+}
+
+.sobre-nosotros p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ACTIVIDADES DESTACADAS
+   ========================= */
+
+.actividades {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color:#f5f3ed;
+}
 
 .actividades .card {
     border: none;
     border-radius: 15px;
     padding: 10px;
+    transition: 0.3s;
+}
+
+.actividades .card:hover {
+    transform: translateY(-5px);
 }
 
 
-/* IMAGENES DE LAS ACTIVIDADES */
+/* IMAGENES */
 
 .actividades .card-img-top {
     width: 100%;
@@ -158,9 +212,266 @@ body {
    CONTACTO
    ========================= */
 
+.contacto {
+    scroll-margin-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ebe9e2;
+}
+
 .contacto h3 {
     font-weight: bold;
 }
 
+.contacto p {
+    line-height: 1.6;
+}
+
+.icono-contacto {
+    display: block;
+    color: #b28a35;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CARTELERA
+   ========================= */
+
+.cartelera {
+    background-color: #f5f3ed;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.actividad-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.actividad-card .card-img-top {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.actividad-card .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.actividad-card .card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.actividad-card .boton {
+    margin-top: auto;
+}
+
+.actividad-card:hover {
+    transform: translateY(-5px);
+}
+
+.categoria {
+    color: #b28a35;
+    font-weight: bold;
+}
+
+.fecha {
+    font-weight: bold;
+}
+
+.fecha i {
+    color: #b28a35;
+    margin-right: 5px;
+}
+
+.categoria i {
+    margin-right: 5px;
+}
+/* =========================
+   INSCRIPCION
+   ========================= */
+
+.inscripcion {
+    background-color: #f5f3ed;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.inscripcion form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.inscripcion .form-label {
+    font-weight: bold;
+}
+
+.inscripcion .form-control,
+.inscripcion .form-select {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.inscripcion .form-control:focus,
+.inscripcion .form-select:focus {
+    border-color: #b28a35;
+    box-shadow: 0 0 0 0.2rem rgba(178, 138, 53, 0.20);
+}
+
+.inscripcion .form-check-label {
+    line-height: 1.5;
+}
+
+.inscripcion .form-check-input:checked {
+    background-color: #b28a35;
+    border-color: #b28a35;
+}
 
 
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: #252b3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 991px) {
+
+    .navegacion {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 60px;
+    }
+
+    .menu {
+        padding-top: 15px;
+    }
+
+    .lista {
+        gap: 5px;
+    }
+
+    .elemento .nav-link {
+        padding: 8px 12px;
+    }
+
+    .sobre-nosotros img {
+        height: 280px;
+    }
+
+    .contenido-bienvenida h1 {
+        font-size: 40px;
+    }
+
+    .descripcion-bienvenida {
+        font-size: 19px;
+    }
+
+    .inscripcion form {
+        padding: 25px;
+    }
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 576px) {
+
+    body {
+        padding-top: 85px;
+    }
+
+    .navegacion {
+        min-height: 85px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: 55px;
+    }
+
+    .contenido-bienvenida h1 {
+        font-size: 34px;
+    }
+
+    .subtitulo-bienvenida {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .descripcion-bienvenida {
+        font-size: 17px;
+    }
+
+    .bienvenida {
+        min-height: 550px;
+        padding: 60px 20px;
+    }
+
+    .sobre-nosotros {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .sobre-nosotros img {
+        height: 240px;
+    }
+
+    .actividades {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .contacto {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .cartelera {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .inscripcion {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .inscripcion form {
+        padding: 20px;
+    }
+
+    .actividad-card .card-title {
+        font-size: 21px;
+    }
+
+}

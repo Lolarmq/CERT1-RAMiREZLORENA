@@ -9,6 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- CSS propio -->
     <link rel="stylesheet" href="estilo/estilo.css">
@@ -46,8 +48,8 @@
                     <ul class="lista navbar-nav mx-auto">
 
                         <li class="elemento nav-item d-flex align-items-center">
-                            <a class="nav-link active" href="PaginaPrincipal.html">
-                                Inicio
+                            <a class="nav-link active" href="PaginaPrincipal.html#nosotros">
+                                Nosotros
                             </a>
                         </li>
 
@@ -59,12 +61,12 @@
 
                         <li class="elemento nav-item d-flex align-items-center">
                             <a class="nav-link" href="Cartelera.html">
-                                Cartelera
+                                Actividades
                             </a>
                         </li>
 
                         <li class="elemento nav-item d-flex align-items-center">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="PaginaPrincipal.html#contacto">
                                 Contacto
                             </a>
                         </li>
@@ -74,7 +76,7 @@
 
                     <!-- BOTON DESTACADO -->
                     <a href="Cartelera.html" class="boton btn-cartelera">
-                        Ver actividades
+                        Ver Actividades
                     </a>
 
                 </div>
@@ -92,20 +94,23 @@
         <section class="bienvenida py-5">
 
             <div class="container">
+                <div class="row justify-content-center text-center py-4">
 
-                <div class="contenido-bienvenida">
+                    <div class="col-lg-8 col-md-10">
 
-                    <h1 class="display-3 fw-bold">
-                        Centro Cultural Puerto Abierto
-                    </h1>
+                        <h1 class="display-3 fw-bold">
+                            Centro Cultural Puerto Abierto
+                        </h1>
 
-                    <p class="lead">
-                        Cultura, arte y comunidad
-                    </p>
+                        <p class="lead">
+                            Cultura, arte y comunidad
+                        </p>
 
-                    <a href="Cartelera.html" class="btn boton">
-                        Ver actividades
-                    </a>
+                        <a href="Cartelera.html" class="btn boton">
+                            Ver actividades
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -115,28 +120,42 @@
 
 
         <!-- SOBRE EL CENTRO -->
-        <section class="sobre-nosotros text-center py-5">
+        <section class="sobre-nosotros text-center py-5" id="nosotros">
 
             <div class="container">
 
-                <div class="contenido-nosotros">
+                <div class="row align-items-center g-5">
 
-                    <h2 class="display-6 fw-bold">
-                        Sobre Nosotros
-                    </h2>
+                    <div class="col-12 col-md-5">
 
-                    <p class="lead">
-                        El Centro Cultural Puerto Abierto es un espacio dedicado
-                        a promover el acceso a la cultura, el arte y la participación
-                        de la comunidad.
-                    </p>
+                        <img src="img/centro.jpg" class="img-fluid rounded" alt="Centro cultural">
 
-                    <p>
-                        Nuestro propósito es generar instancias de encuentro
-                        para personas de todas las edades, ofreciendo actividades
-                        culturales, talleres y experiencias que permiten disfrutar
-                        y participar activamente de la vida cultural.
-                    </p>
+                    </div>
+
+                    <div class="col-12 col-md-7">
+
+                        <h2 class="display-6 fw-bold">
+                            Sobre Nosotros
+                        </h2>
+
+                        <p class="lead">
+                            El Centro Cultural Puerto Abierto es un espacio dedicado
+                            a promover el acceso a la cultura, el arte y la participación
+                            de la comunidad.
+                        </p>
+                        <p>
+                            Nuestro propósito es generar instancias de encuentro
+                            para personas de todas las edades, ofreciendo actividades
+                            culturales, talleres y experiencias que permiten disfrutar
+                            y participar activamente de la vida cultural.
+                        </p>
+                        <p> A través de nuestra programación buscamos acercar diferentes 
+                            expresiones artísticas a la comunidad, creando un espacio abierto 
+                            para aprender, compartir y desarrollar nuevas habilidades. 
+                        </p>
+
+                    </div>
+
 
                 </div>
 
@@ -266,7 +285,7 @@
                 <div class="text-center mt-5">
 
                     <a href="Cartelera.html" class="btn boton">
-                        Ver cartelera completa
+                        Ver Actividades
                     </a>
 
                 </div>
@@ -277,7 +296,7 @@
 
 
         <!-- CONTACTO -->
-        <section class="contacto py-5">
+        <section class="contacto py-5" id="contacto">
 
             <div class="contact container">
 
@@ -299,6 +318,8 @@
                     <!-- UBICACIÓN -->
                     <div class="ubi col-12 col-md-4">
 
+                        <i class="bi bi-geo-alt-fill icono-contacto" aria-hidden="true"></i>
+
                         <h3>
                             Ubicación
                         </h3>
@@ -314,6 +335,8 @@
                     <!-- TELÉFONO -->
                     <div class="num col-12 col-md-4">
 
+                        <i class=" bi bi-telephone-fill icono-contacto" aria-hidden="true"></i>
+
                         <h3>
                             Teléfono
                         </h3>
@@ -327,6 +350,8 @@
 
                     <!-- CORREO -->
                     <div class="correo col-12 col-md-4">
+
+                        <i class="bi bi-envelope-fill icono-contacto" aria-hidden="true"></i>
 
                         <h3>
                             Correo
@@ -345,6 +370,14 @@
         </section>
 
     </main>
+
+    <footer>
+
+        <p>
+            © 2026 Centro Cultural Puerto Abierto
+        </p>
+
+    </footer>
 
 
     <!-- Bootstrap JS -->
